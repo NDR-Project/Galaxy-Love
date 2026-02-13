@@ -66,6 +66,10 @@ window.handleUpload = async function() {
         setTimeout(() => document.getElementById('ui-overlay').style.opacity = '0', 3000);
 
     } catch (err) {
+    alert("Waduh, ada error: " + err.message);
+    console.error(err);
+}
+
         status.innerHTML = `<small style="color:red">Error: ${err.message}</small>`;
     }
 };
